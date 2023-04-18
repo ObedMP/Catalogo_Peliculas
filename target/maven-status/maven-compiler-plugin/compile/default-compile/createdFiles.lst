@@ -1,0 +1,8 @@
+cpjlaboratoriofinal\CPJLaboratorioFinal.class
+sv\com\dm\peliculas\excepciones\AccesoDatosEx.class
+sv\com\dm\peliculas\excepciones\LecturaDatosEx.class
+sv\com\dm\peliculas\negocio\CatalogoPeliculasImpl.class
+sv\com\dm\peliculas\domain\Pelicula.class
+sv\com\dm\peliculas\negocio\CatalogoPelicula.class
+sv\com\dm\peliculas\datos\AccesoDatos.class
+sv\com\dm\peliculas\excepciones\EscrituraDatosEx.class
