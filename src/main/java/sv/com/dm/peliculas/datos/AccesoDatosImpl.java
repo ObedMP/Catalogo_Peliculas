@@ -67,21 +67,40 @@ public  class AccesoDatosImpl implements IAccesoDatos {
             linea =entrada.readLine();
             int indice=1;
             while(linea != null){
-                
+                if (buscar != null && buscar.equals(linea)){
+                   resultado = "Pelicula"+ linea + "encontrada en el indice "+indice;
+                   break;
+                }
+                linea=entrada.readLine();
+                indice++;
             }
         } catch (FileNotFoundException ex) {
             throw new LecturaDatosEx("Excepcion al buscar peliculas"+ex.getMessage());
         } catch (IOException ex) {
             throw new LecturaDatosEx("Excepcion al buscar peliculas"+ex.getMessage());
         }
+        return resultado;
     }
 
     @Override
     public void crear(String nombreArchivo) throws AccesoDatosEx {
+        var archivo =new File(nombreArchivo);
+        try{
+        var salida =new PrintWriter(new FileWriter(archivo));
+        salida.close();
+            System.out.println("Se ha creado el archivo");
+        } catch (IOException ex){
+            ex.printStackTrace();
+            throw new AccesoDatosEx("Excepcion al crear archivo"+ex.getMessage());
+        }
     }
 
     @Override
     public void borrar(String nombreArchivo) throws AccesoDatosEx {
+        var archivo = new File(nombreArchivo);
+        if (archivo.exists())
+            archivo.delete();
+        System.out.println("Se ha borrado archivo");
     }
 
     

@@ -1,4 +1,4 @@
-package cpjlaboratoriofinal;
+/*package cpjlaboratoriofinal;
 import java.util.Scanner;
 import sv.com.dm.peliculas.negocio.*;
 public class CPJLaboratorioFinal {
